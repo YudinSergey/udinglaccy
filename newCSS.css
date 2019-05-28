@@ -837,49 +837,46 @@
     padding-top:10px;
 }
 
-.map_main{
+.map{
     grid-row: 7;
     grid-column:1;
-}
-
-.map{
+    background: url("img/map.png")no-repeat;
+    background-position: 50% 0;
     min-width:100%;
     height:100%;
     display:flex;
     justify-content: space-between;
     align-items: center;
+    padding-right:27px;
+    padding-left:266px;
 }
 
-.map_main .map_wrapper{
-    position: relative;
+.map img{
+    margin-bottom:15px;
 }
 
-.map_wrapper .address_block{
+.map .address_block{
     width: 302px;
     height: 305px;
     background-color: white;
     border-radius: 10px;
     padding-top:30px;
     padding-left:25px;
-    position:absolute;
-    z-index: 50;
-    top:60px;
-    left:72.5%;
 }
 
-.address_block p{
+.map .address_block p{
     color: #323232;
     font-family: Roboto;
     font-size: 14px;
     font-weight: 400;
 }
 
-.address_block p:first-child{
+.map .address_block p:first-child{
     max-width:148px;
     line-height: 20px;
 }
 
-.address_block p:nth-child(2){
+.map .address_block p:nth-child(2){
     color: #323232;
     font-family: Roboto;
     font-size: 18px;
@@ -890,7 +887,7 @@
     word-spacing: 0.5px;
 }
 
-.address_block p:nth-child(3){
+.map .address_block p:nth-child(3){
     color: #323232;
     font-family: Roboto;
     font-size: 14px;
@@ -898,18 +895,18 @@
     margin-bottom:5px;
 }
 
-.address_block p:nth-child(4){
+.map .address_block p:nth-child(4){
     font-family: "Roboto Bold";
     font-size: 18px;
     font-weight: 700;
     margin-bottom:5px;
 }
 
-.address_block p:nth-child(5){
+.map .address_block p:nth-child(5){
     margin-bottom:25px;
 }
 
-.address_block .button{
+.map .address_block .button{
     width: 252px;
     height: 44px;
     color: #fefefe;
@@ -1528,10 +1525,16 @@
         min-width:0;
         width:820px;
         margin:0 auto;
+        background-size: cover;
+        background-position: 28% 0;
+        padding-left:170px;
     }
 
+    .map img{
+        height:130px;
+    }
 
-    .map_wrapper .address_block{
+    .map .address_block{
         width: 275px;
         height: 275px;
         background-color: white;
@@ -1539,24 +1542,22 @@
         padding-top:26px;
         padding-left:24px;
         margin-right: -7px;
-        top:58px;
-        left:62.8%;
     }
 
-    .address_block p{
+    .map .address_block p{
         color: #323232;
         font-family: Roboto;
         font-size: 12px;
         font-weight: 400;
     }
 
-    .address_block p:first-child{
+    .map .address_block p:first-child{
         max-width:137px;
         line-height: 18px;
         letter-spacing: 0.5px;
     }
 
-    .address_block p:nth-child(2){
+    .map .address_block p:nth-child(2){
         color: #323232;
         font-family: Roboto;
         font-size: 16px;
@@ -1568,7 +1569,7 @@
         letter-spacing: 0.2px;
     }
 
-    .address_block p:nth-child(3){
+    .map .address_block p:nth-child(3){
         color: #323232;
         font-family: Roboto;
         font-size: 12px;
@@ -1577,19 +1578,19 @@
         letter-spacing: 0.3px;
     }
 
-    .address_block p:nth-child(4){
+    .map .address_block p:nth-child(4){
         font-family: "Roboto Bold";
         font-size: 16px;
         font-weight: 700;
         margin-bottom:5px;
     }
 
-    .address_block p:nth-child(5){
+    .map .address_block p:nth-child(5){
         margin-bottom:23px;
         letter-spacing: 0.3px;
     }
 
-    .address_block .button{
+    .map .address_block .button{
         width: 227px;
         height: 40px;
         color: #fefefe;
