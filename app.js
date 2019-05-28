@@ -106,3 +106,45 @@ $('.hit_product_4').on('mouseenter', ()=>{
 $('.hit_product').on('mouseleave', ()=>{
     $('.hit_product_view').css({"display":"none"});
 });
+
+let myMap;
+ymaps.ready(init);
+
+function init () {
+    // Создание экземпляра карты и его привязка к контейнеру с
+    // заданным id ("map").
+    myMap = new ymaps.Map('map', {
+        // При инициализации карты обязательно нужно указать
+        // её центр и коэффициент масштабирования.
+        center: [59.939151, 30.329355], // Санкт-Петербург
+        zoom: 16
+    }, {
+        searchControlProvider: 'yandex#search'
+    });
+        MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+            '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+        );
+
+        myPlacemark = new ymaps.Placemark([59.940000, 30.32215], {
+            hintContent: 'Собственный значок метки',
+            balloonContent: 'Это красивая метка'
+        }, {
+            // Опции.
+            // Необходимо указать данный тип макета.
+            iconLayout: 'default#image',
+            // Своё изображение иконки метки.
+            iconImageHref: 'img/map_label.png',
+            // Размеры метки.
+            iconImageSize: [81, 140],
+            // Смещение левого верхнего угла иконки относительно
+            // её "ножки" (точки привязки).
+            iconImageOffset: [0, 0]
+        });
+
+    myMap.geoObjects
+        .add(myPlacemark);
+
+}
+
+
+
